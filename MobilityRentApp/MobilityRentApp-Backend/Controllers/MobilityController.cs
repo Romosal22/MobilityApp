@@ -16,8 +16,12 @@ namespace MobilityRentApp_Backend.Controllers
     public class MobilityController : CustomControllerBase<Mobility>
     {
         private const string getMobilityRouteName = "getMobility";
+        private const string calculateRentCost = "calculateRentCost";
+
+        private IMobilityRepository _repository;
         public MobilityController(IMobilityRepository repository, IMapper mapper) : base(repository, mapper)
         {
+            _repository =  repository;
         }
 
         [HttpGet]
@@ -30,6 +34,12 @@ namespace MobilityRentApp_Backend.Controllers
         public async Task<ActionResult<MobilityDto>> Get(int id)
         {
             return await Get<MobilityDto>(id);
+        }
+
+        [HttpGet("cost/{id:int}")]
+        public double GetCost(int id)
+        {
+            return _repository.CalculateRentCost(id);
         }
 
         [HttpPost]

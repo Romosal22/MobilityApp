@@ -27,5 +27,7 @@ namespace MobilityRentApp_Backend.Model.Dtos.User
 
         [Required]
         public Boolean IsActive { get; set; }
+
+        public int RoleId { get; set; }
     }
 }

@@ -13,8 +13,11 @@ namespace MobilityRentApp_Backend.Controllers
     public class RentEnrollmentController : CustomControllerBase<RentEnrollment>
     {
         private const string getRentEnrollmentRouteName = "getRentEnrollment";
+
+        private IRentEnrollmentRepository _repository;
         public RentEnrollmentController(IRentEnrollmentRepository repository, IMapper mapper) : base(repository, mapper)
         {
+            _repository = repository;
         }
 
         [HttpGet]
@@ -27,6 +30,14 @@ namespace MobilityRentApp_Backend.Controllers
         public async Task<ActionResult<RentEnrollmentDto>> Get(int id)
         {
             return await Get<RentEnrollmentDto>(id);
+        }
+
+        [HttpGet("user/{id:int}")]
+        public List<RentEnrollmentDto> GetByUser(int id)
+        {
+            var result = _repository.GetByUser(id);
+            var dto = mapper.Map<List<RentEnrollmentDto>>(result);
+            return dto;
         }
 
         [HttpPost]
@@ -46,5 +57,6 @@ namespace MobilityRentApp_Backend.Controllers
         {
             return await base.Delete(id);
         }
+
     }
 }

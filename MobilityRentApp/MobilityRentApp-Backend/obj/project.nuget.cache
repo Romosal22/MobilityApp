@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zi7ryymhFeI8rrFBqhHg5G+KGVL4XvWMO0CNG2rOeAOecLza2rcK0PQ7JMoE6U8hNWz5eJS+XTF0HIRZudAVpg==",
+  "dgSpecHash": "i70xlYkCUqztFCod2aXzYstXQdXnoUdFPiaicky+4cQ+WHYLZS9cY+3CNw851u2TFLxvZCpCCdPEkAwvKVf9eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rodolfo.moreno\\Desktop\\LOCAL\\Tranining Program\\CONCEPT_TEST\\MobilityRentApp\\MobilityRentApp-Backend\\MobilityRentApp-Backend.csproj",
+  "projectFilePath": "C:\\Users\\rodolfo.moreno\\Desktop\\LOCAL\\Tranining Program\\CONCEPT_TEST\\MobilityApp\\MobilityRentApp\\MobilityRentApp-Backend\\MobilityRentApp-Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodolfo.moreno\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\rodolfo.moreno\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

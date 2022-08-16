@@ -30,6 +30,9 @@ namespace MobilityRentApp_Backend.Model.Entities
         public string EmailAddress { get; set; }
 
         [Required]
+        public int RoleId  { get; set; }
+
+        [Required]
         public Boolean IsActive { get; set; }
 
         public List<RentEnrollment>? RentEnrollments { get; set; }

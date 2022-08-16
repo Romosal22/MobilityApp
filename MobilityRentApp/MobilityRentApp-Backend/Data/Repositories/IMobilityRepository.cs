@@ -5,5 +5,7 @@ namespace MobilityRentApp_Backend.Data.Repositories
 {
     public interface IMobilityRepository : IRepository<Mobility>
     {
+         double CalculateRentCost(int id);
     }
+
 }

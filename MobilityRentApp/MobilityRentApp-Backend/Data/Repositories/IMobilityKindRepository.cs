@@ -5,5 +5,6 @@ namespace MobilityRentApp_Backend.Data.Repositories
 {
     public interface IMobilityKindRepository : IRepository<MobilityKind>
     {
+        //public string getKindNameById(int mobilitiKindId);
     }
 }

@@ -29,6 +29,11 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 //builder.Services.AddIdentityCore<User>().AddRoles<IdentityRole>();
 
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+
+}));
 
 //builder.Services.AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -63,6 +68,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("corsapp");
 
 app.UseHttpsRedirection();
 
